@@ -35,9 +35,8 @@ namespace PizzaPan.PresentationLayer.Controllers
 
         public IActionResult DeleteCategory(int id)
         {
-            var values = _categoryService.TGetById(id); 
-            _categoryService.TUpdate(values);
-            
+            var value = _categoryService.TGetById(id);
+            _categoryService.TDelete(value);
             return RedirectToAction("Index");
         }
 

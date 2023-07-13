@@ -36,9 +36,9 @@ namespace PizzaPan.PresentationLayer.Controllers
 
         public IActionResult DeleteProduct(int id)
         {
-            var values = _productService.TGetById(id);
-            _productService.TUpdate(values);
 
+            var value = _productService.TGetById(id);
+            _productService.TDelete(value);
             return RedirectToAction("Index");
         }
 
