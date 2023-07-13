@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PizzaPan.BussinesLayer.Concrete
 {
-    internal class TestimanialManager
+    public class TestimanialManager
     {
     }
 }

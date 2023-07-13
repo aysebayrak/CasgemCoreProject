@@ -8,13 +8,14 @@ namespace PizzaPan.PresentationLayer.Controllers
     {
 
         private readonly IProductService _productService;
+
         public ProductController(IProductService productService)
         {
-            _productService = productService;   
 
+            _productService = productService;   
         }
-        
-       public IActionResult Index()
+
+        public IActionResult Index()
         {
             var values = _productService.TGetList();
             return View(values);
