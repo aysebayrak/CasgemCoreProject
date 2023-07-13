@@ -1,0 +1,9 @@
+{
+  "name": "casgem-core-project",
+  "version": "0.0.0",
+  "description": "CasgemCoreProject",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
