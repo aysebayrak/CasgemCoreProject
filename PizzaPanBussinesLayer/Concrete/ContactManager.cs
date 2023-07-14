@@ -29,6 +29,11 @@ namespace PizzaPan.BussinesLayer.Concrete
            return   _contactDal.GetById(id);
         }
 
+        public List<Contact> TGetContactBySubjectWithTesekkur()
+        {
+            return _contactDal.GetContactBySubjectWithTesekkur();   
+        }
+
         public List<Contact> TGetList()
         {
             return _contactDal.GetList();

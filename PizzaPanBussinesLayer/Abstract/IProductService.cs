@@ -9,5 +9,6 @@ namespace PizzaPan.BussinesLayer.Abstract
 {
     public interface IProductService :IGenericeService<Product>
     {
+        public List<Product> TGetProductsWithCategory();
     }
 }

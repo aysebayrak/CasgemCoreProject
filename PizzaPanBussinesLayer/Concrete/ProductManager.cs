@@ -34,6 +34,11 @@ namespace PizzaPan.BussinesLayer.Concrete
             return _productDal.GetList();
         }
 
+        public List<Product> TGetProductsWithCategory()
+        {
+            return _productDal.GetProductsWithCategory();
+        }
+
         public void TInsert(Product t)
         {
             _productDal.Insert(t);

@@ -9,5 +9,6 @@ namespace PizzaPan.BussinesLayer.Abstract
 {
     public interface IContactService :IGenericeService<Contact>
     {
+        List<Contact> TGetContactBySubjectWithTesekkur();
     }
 }

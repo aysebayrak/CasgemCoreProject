@@ -9,6 +9,7 @@ using PizzaPan.BussinesLayer.Concrete;
 using PizzaPan.DataAccessLayer.Abstract;
 using PizzaPan.DataAccessLayer.EntityFramework;
 using PizzaPan.DataAcsessLayer.Concrete;
+using PizzaPan.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,19 @@ namespace PizzaPan.PresentationLayer
 
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<IProductDal, EfProductDal>();
+
+            services.AddScoped<IContactService, ContactManager>();
+            services.AddScoped<IContactDal, EfContactDal>();
+
+            services.AddScoped<ITestimanialService, TestimanialManager>();
+            services.AddScoped<ITestimanialDal, EfTestimanialDal>();
+
+
+            services.AddScoped<IDiscountService, DiscountManager>();
+            services.AddScoped<IDiscountDal, EfDiscountDal>();
+
+
+            services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
             services.AddControllersWithViews();
         }
 

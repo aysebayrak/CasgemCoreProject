@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using PizzaPan.EntityLayer.Concrate;
 using PizzaPan.EntityLayer.Concrete;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PizzaPan.DataAcsessLayer.Concrete
 {
-    public class Context: DbContext
+    public class Context: IdentityDbContext<AppUser, AppRole,int>
     { 
        protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder)
         {
@@ -20,6 +21,8 @@ namespace PizzaPan.DataAcsessLayer.Concrete
         public DbSet<Contact> Contacts{ get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Testimanial> Testimanials { get; set; }
+
+        public DbSet<Discount> Discounts { get; set; }
 
 
 
