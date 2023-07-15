@@ -54,7 +54,7 @@ namespace PizzaPan.PresentationLayer.Controllers
         [HttpPost]
         public IActionResult UpdateReference(Reference reference)
         {
-            _referenceService.TUpdate(reference);
+          _referenceService.TUpdate(reference);
             return RedirectToAction("Index");
 
         }
