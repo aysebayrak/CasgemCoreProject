@@ -47,7 +47,7 @@ namespace PizzaPan.PresentationLayer.Controllers
         public IActionResult UpdateCustomer(int id)
         {
             var value = _customerService.TGetById(id);
-            return View();
+            return View(value);
         }
 
         [HttpPost]

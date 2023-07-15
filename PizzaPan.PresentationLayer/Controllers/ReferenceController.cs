@@ -47,7 +47,7 @@ namespace PizzaPan.PresentationLayer.Controllers
         public IActionResult UpdateReference(int id)
         {
             var value = _referenceService.TGetById(id);
-            return View();
+            return View(value);
         }
 
         [HttpPost]

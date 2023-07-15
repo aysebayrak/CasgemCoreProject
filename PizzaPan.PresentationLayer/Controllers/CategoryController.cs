@@ -46,7 +46,7 @@ namespace PizzaPan.PresentationLayer.Controllers
         public IActionResult UpdateCategory(int id)
         {
             var value = _categoryService.TGetById(id);
-            return View();
+            return View(value);
         }
 
         [HttpPost]
