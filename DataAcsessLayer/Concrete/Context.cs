@@ -24,6 +24,10 @@ namespace PizzaPan.DataAcsessLayer.Concrete
 
         public DbSet<Discount> Discounts { get; set; }
 
+        public DbSet<Customer> Customers { get; set; }
+
+
+
 
 
     }
