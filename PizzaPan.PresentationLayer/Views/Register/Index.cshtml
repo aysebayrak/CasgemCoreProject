@@ -6,39 +6,32 @@
 }
 
 
-<link href="~/lib/bootstrap/dist/css/bootstrap.min.css"  rel="stylesheet"/>
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-<form mmethod="post" >
+<form method="post">
+    <div class="container">
+        <br />
+        <br />
 
-<div class="container">
-    <br><br />
-    <label>Adınız</label>
-    <input type="text" class="fform-control"  asp-for="Name" />
+        <label>Adınız</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+        <label>Soyadınız</label>
+        <input type="text" asp-for="Surname" class="form-control" />
+        <br />
+        <label>Kullanıcı Adı</label>
+        <input type="text" asp-for="Username" class="form-control" />
+        <br />
+        <label>Email</label>
+        <input type="email" asp-for="Email" class="form-control" />
+        <br />
+        <label>Şifreniz</label>
+        <input type="password" asp-for="Password" class="form-control" />
+        <br />
+        <label>Şifre Tekrar</label>
+        <input type="password" asp-for="ConfirmPassword" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Kayıt Ol</button>
 
-
-     <br />
-    <label>Soyadınız</label>
-    <input type="text" class="fform-control"  asp-for="Surname" />
-
-       <br />
-    <label>Kullanıcı Adı</label>
-    <input type="text" class="fform-control"  asp-for="Username" />
-
-     <br />
-    <label>Email</label>
-    <input type="email" class="fform-control"  asp-for="Email" />
-
-
-     <br />
-    <label>Şifreniz</label>
-    <input type="password" class="fform-control"  asp-for="Password" />
-
-     <br />
-    <label>Şifre Tekrar</label>
-    <input type="text" class="fform-control"  asp-for="ConfirmPassword" />
-
-    <br />
-    <button class="btn btn-primary">Kayıt Ol</button>
-</div>
-
+    </div>
 </form>

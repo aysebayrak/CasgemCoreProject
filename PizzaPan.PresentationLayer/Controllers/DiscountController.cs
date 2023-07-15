@@ -33,6 +33,7 @@ namespace PizzaPan.PresentationLayer.Controllers
 
 
             return View();
+
         }
 
 
@@ -44,7 +45,7 @@ namespace PizzaPan.PresentationLayer.Controllers
             discount.CreationDate = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             discount.LastDate = Convert.ToDateTime(DateTime.Now.AddDays(3));
             _discountService.TInsert(discount);
-            return RedirectToAction("Index");
+            return RedirectToAction("DiscountCodeList");
 
 
         }
