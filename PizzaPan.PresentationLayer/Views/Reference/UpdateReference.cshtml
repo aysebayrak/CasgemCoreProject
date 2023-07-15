@@ -1,0 +1,26 @@
+﻿@model Reference
+
+
+@{
+    ViewData["Title"] = "UpdateReference";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Referans Güncelleme</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="ReferenceID" />
+    <label>Referans Adı</label>
+    <input asp-for="ReferenceName" class="form-control" style="background-color:#b1b3b1" />
+    <br />
+    <label>Firma Adı</label>
+    <input asp-for="CompanyName" class="form-control" style="background-color:#b1b3b1" />
+    <br />
+    
+    <label>Referans Numarası</label>
+    <input asp-for="ReferenceNumber" class="form-control" style="background-color:#b1b3b1" />
+    <br />
+   
+    <button class="btn btn-info">Kaydet</button>
+</form>
+
