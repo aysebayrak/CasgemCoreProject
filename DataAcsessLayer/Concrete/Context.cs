@@ -26,6 +26,8 @@ namespace PizzaPan.DataAcsessLayer.Concrete
 
         public DbSet<Customer> Customers { get; set; }
 
+        public DbSet<Reference> References { get; set; }
+
 
 
 
