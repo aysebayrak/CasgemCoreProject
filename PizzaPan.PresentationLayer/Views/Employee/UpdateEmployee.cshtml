@@ -6,5 +6,38 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>UpdateEmployee</h1>
+<h1>Personel Güncelleme Sayfası</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="EmployeeID"/>
+    
+      <label>Personel  Adı</label>
+    <input type="text" class="form-control" asp-for="EmployeeName" style="background-color:darkgray" />
+    <br />
+
+      <label>Personel Soyadı</label>
+    <input type="text" class="form-control" asp-for="EmployeeSurname" style="background-color:darkgray" />
+    <br />
+
+    <label>Personel Maaşı</label>
+    <input type="text" class="form-control" asp-for="EmployeeSalary" style="background-color:darkgray" />
+    <br />
+
+     <label> Medeni Durumu (1 bekar , 2 evli )</label>
+    <input type="text" class="form-control" asp-for="Maritalstatus" style="background-color:darkgray" />
+    <br />
+
+
+     <label>Personel Yaşı</label>
+    <input type="text" class="form-control" asp-for="EmployeeAge" style="background-color:darkgray" />
+    <br />
+
+
+
+
+
+
+    <button class="btn btn-primary">Güncelle</button>
+</form>
+
 

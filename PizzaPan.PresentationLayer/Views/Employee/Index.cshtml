@@ -6,5 +6,33 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Personel Listesi</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Personel Adı</th>
+        <th>Personel Soyadı</th>
+        <th>Personel Maaş</th>
+        <th>Personel Medeni Durum</th>
+        <th>Personel Yaşı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EmployeeID</td>
+            <td>@item.EmployeeName</td>
+              <td>@item.EmployeeSurname</td>
+                <td>@item.EmployeeSalary</td>  
+                <td>@item.Maritalstatus</td>
+                  <td>@item.EmployeeAge</td>
+            
+            <td><a href="/Employee/DeleteEmployee/@item.EmployeeID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Employee/UpdateEmployee/@item.EmployeeID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Employee/AddEmployee" class="btn btn-outline-primary">Yeni Personel Girişi</a>
 

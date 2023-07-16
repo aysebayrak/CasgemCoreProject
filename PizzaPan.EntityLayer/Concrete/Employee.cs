@@ -12,7 +12,7 @@ namespace PizzaPan.EntityLayer.Concrete
         public string EmployeeName  { get; set; }
         public string EmployeeSurname { get; set; }
         public int EmployeeSalary{ get; set; }
-        public bool Maritalstatus { get; set; }
+        public int Maritalstatus { get; set; }
         public int EmployeeAge { get; set; }
 
     }
