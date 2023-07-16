@@ -53,6 +53,9 @@ namespace PizzaPan.PresentationLayer
             services.AddScoped<IReferenceService, ReferenceManager>();
             services.AddScoped<IReferenceDal, EfReferenceDal>();
 
+            services.AddScoped<IEmployeeService, EmployeeManager>();
+            services.AddScoped<IEmployeeDal, EfEmployeeDal>();
+
 
             services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
             services.AddControllersWithViews();
