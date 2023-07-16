@@ -13,5 +13,6 @@ namespace PizzaPan.PresentationLayer.Models
         public string Password { get; set; }
         [Compare("Password" , ErrorMessage ="Şifreler Uyuşmuyor")]
         public string ConfirmPassword { get; set; }
+
     }
 }
