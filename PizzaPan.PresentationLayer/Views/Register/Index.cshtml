@@ -74,11 +74,7 @@ Author URL: http://w3layouts.com
                 <div class="main-hotair">
                     <div class="content-wthree">
                         <h2>Kayıt Ol</h2>
-                        @*<form action="#" method="post">
-                            <input type="text" class="text" name="text" placeholder="User Name" required="" autofocus>
-                            <input type="password" class="password" name="password" placeholder="User Password" required="" autofocus>
-                            <button class="btn" type="submit">Kayıt Ol</button>
-                        </form>*@
+                       
 
                         <form method="post">
     <div class="container">
@@ -103,18 +99,23 @@ Author URL: http://w3layouts.com
         <label>Şifre Tekrar</label>
         <input type="password" asp-for="ConfirmPassword" class="form-control" />
         <br />
+
+        
         <button class="btn btn-primary">Kayıt Ol</button>
 
     </div>
+    
 </form>
-
+   @*<div class="text-danger" asp-validation-summary="ModelOnly"></div>*@
                         
-                        <p class="account">Hesabın Var mı?  <a href="#signup">Giriş</a></p>
+                        <p class="account">Hesabın Var mı?  <a href="/Register/Login/">Giriş</a></p>
                     </div>
+                 
                     <div class="w3l_form align-self">
                         <div class="left_grid_info">
                             <img src="~/Report-Login-Free/images/1.png" alt="" class="img-fluid">
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -125,6 +126,11 @@ Author URL: http://w3layouts.com
            @* <p class="copy-footer-29">© 2021 Report Login Form. All rights reserved | Design by <a*@
                      @*   href="https://w3layouts.com">W3layouts</a></p>*@
         </div>
+
+
+         
+
+
         <!-- //copyright-->
     </section>
     <!-- //form section start -->

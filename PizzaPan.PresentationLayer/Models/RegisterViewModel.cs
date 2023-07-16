@@ -14,5 +14,8 @@ namespace PizzaPan.PresentationLayer.Models
         [Compare("Password" , ErrorMessage ="Şifreler Uyuşmuyor")]
         public string ConfirmPassword { get; set; }
 
+   
+
+
     }
 }

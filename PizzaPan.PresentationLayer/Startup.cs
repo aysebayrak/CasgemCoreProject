@@ -57,7 +57,14 @@ namespace PizzaPan.PresentationLayer
             services.AddScoped<IEmployeeDal, EfEmployeeDal>();
 
 
-            services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
+            //services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
+            services.AddIdentity<AppUser, AppRole>(x =>
+            {
+                x.Password.RequireUppercase = false;
+                x.Password.RequireNonAlphanumeric = false;  
+            } )
+                .AddEntityFrameworkStores<Context>();
+
             services.AddControllersWithViews();
         }
 
