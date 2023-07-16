@@ -28,6 +28,8 @@ namespace PizzaPan.DataAcsessLayer.Concrete
 
         public DbSet<Reference> References { get; set; }
 
+        public DbSet<Employee>  Employees {get; set;}
+
 
 
 
