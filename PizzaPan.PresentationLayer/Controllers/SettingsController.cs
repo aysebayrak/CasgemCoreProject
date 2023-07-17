@@ -27,5 +27,32 @@ namespace PizzaPan.PresentationLayer.Controllers
 
             return View(model); 
         }
+
+
+
+        [HttpPost]
+
+        public async Task<IActionResult> Index(UserEditViewModel model)
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);  
+            user.Surname = model.Surname;   
+            user.Name = model.Name;
+            user.City = model.City;
+            user.Email = model.Email;
+            user.PasswordHash = _userManager.PasswordHasher.HashPassword(user,model.Password);
+            var result = await _userManager.UpdateAsync(user);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index","Login");
+            }
+            else
+            {
+                return View();
+            }
+
+           
+        }
+
+
     }
 }
