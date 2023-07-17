@@ -58,6 +58,10 @@ namespace PizzaPan.PresentationLayer
             services.AddScoped<IEmployeeDal, EfEmployeeDal>();
 
 
+            services.AddScoped<IProductImageService, ProductImageManager>();
+            services.AddScoped<IProductImageDal, EfProductImageDal>();
+
+
             //services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
             services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>(). AddEntityFrameworkStores<Context>();
 

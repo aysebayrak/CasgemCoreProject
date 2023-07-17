@@ -25,20 +25,19 @@ namespace PizzaPan.PresentationLayer.Controllers
             return View();
         }
 
-        [HttpPost]  
-        public async  Task<IActionResult> Index(LoginViewModel model)
+        [HttpPost]
+        public async Task<IActionResult> Index(LoginViewModel model)
         {
-            var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, true, true);
+            var result = await _signInManager.PasswordSignInAsync(model.Username, model.Password, true, true);
             if (result.Succeeded)
             {
                 return RedirectToAction("Index", "Category");
             }
             return View();
-          
-
         }
+    
 
 
 
-    }
+}
 }

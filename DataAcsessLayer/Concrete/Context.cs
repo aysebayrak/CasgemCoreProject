@@ -30,6 +30,8 @@ namespace PizzaPan.DataAcsessLayer.Concrete
 
         public DbSet<Employee>  Employees {get; set;}
 
+        public DbSet<ProductImage>  ProductImages { get; set; }
+
 
 
 
