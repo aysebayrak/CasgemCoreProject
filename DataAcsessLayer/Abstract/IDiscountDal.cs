@@ -9,5 +9,6 @@ namespace PizzaPan.DataAccessLayer.Abstract
 {
     public interface IDiscountDal : IGenericDal<Discount>
     {
+       
     }
 }

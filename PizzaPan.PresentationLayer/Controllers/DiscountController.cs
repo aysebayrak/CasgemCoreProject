@@ -27,11 +27,7 @@ namespace PizzaPan.PresentationLayer.Controllers
             c3 = random.Next(0, symbols.Length);
             c4 = random.Next(0, symbols.Length);
             c5 = random.Next(10, 100);
-
             ViewBag.v = symbols[c1] + symbols[c2] + symbols[c3] + symbols[c4] + c5;
-
-
-
             return View();
 
         }

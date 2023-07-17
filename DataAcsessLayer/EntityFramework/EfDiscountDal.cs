@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace PizzaPan.DataAccessLayer.EntityFramework
 {
-    public class EfDiscountDal :GenericRepository<Discount> ,IDiscountDal
+    public class EfDiscountDal : GenericRepository<Discount>, IDiscountDal
     {
-
+        
     }
 }

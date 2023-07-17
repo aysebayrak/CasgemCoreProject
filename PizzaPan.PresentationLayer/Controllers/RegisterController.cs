@@ -34,19 +34,33 @@ namespace PizzaPan.PresentationLayer.Controllers
                 Email = model.Email,
                 UserName = model.Username
             };
-
-            if (ModelState.IsValid)
+            if(model.Password ==model.ConfirmPassword )
             {
 
-                await _userManager.CreateAsync(appUser, model.Password);
-
-                return RedirectToAction("Index", "Login");
+               var result =   await _userManager.CreateAsync(appUser, model.Password);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Login");
+                }
+                else
+                {
+                    foreach(var item in result.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+                }
+               
 
             }
             else
             {
-                return View();
+                ModelState.AddModelError("", "Şifreler Eşleşmiyor.");
+
             }
+            return View();
+
+
+         
         }
     }
 }

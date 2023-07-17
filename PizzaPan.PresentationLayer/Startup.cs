@@ -10,6 +10,7 @@ using PizzaPan.DataAccessLayer.Abstract;
 using PizzaPan.DataAccessLayer.EntityFramework;
 using PizzaPan.DataAcsessLayer.Concrete;
 using PizzaPan.EntityLayer.Concrete;
+using PizzaPan.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,12 +59,7 @@ namespace PizzaPan.PresentationLayer
 
 
             //services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
-            services.AddIdentity<AppUser, AppRole>(x =>
-            {
-                x.Password.RequireUppercase = false;
-                x.Password.RequireNonAlphanumeric = false;  
-            } )
-                .AddEntityFrameworkStores<Context>();
+            services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>(). AddEntityFrameworkStores<Context>();
 
             services.AddControllersWithViews();
         }
@@ -85,6 +81,7 @@ namespace PizzaPan.PresentationLayer
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
