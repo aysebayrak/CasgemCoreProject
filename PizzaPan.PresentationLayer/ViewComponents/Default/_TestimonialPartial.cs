@@ -3,11 +3,11 @@ using PizzaPan.BussinesLayer.Abstract;
 
 namespace PizzaPan.PresentationLayer.ViewComponents.Default
 {
-    public class _TestimonialService  : ViewComponent
+    public class _TestimonialPartial  : ViewComponent
     {
         private readonly ITestimanialService _testimanialService;
 
-        public _TestimonialService(ITestimanialService testimanialService)
+        public _TestimonialPartial(ITestimanialService testimanialService)
         {
             _testimanialService = testimanialService;
         }
