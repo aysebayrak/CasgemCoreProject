@@ -43,7 +43,7 @@ namespace PizzaPan.PresentationLayer.Controllers
             {
                 #region
                 MimeMessage mimeMessage = new MimeMessage();
-                MailboxAddress mailboxAddressFrom = new MailboxAddress("Admin", "projekursapi@gmail.com");
+                MailboxAddress mailboxAddressFrom = new MailboxAddress("Admin", "@gmail.com");
                 mimeMessage.From.Add(mailboxAddressFrom);
 
                 MailboxAddress mailboxAddressTo = new MailboxAddress("User", model.Email);
