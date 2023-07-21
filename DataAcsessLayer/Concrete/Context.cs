@@ -34,7 +34,7 @@ namespace PizzaPan.DataAcsessLayer.Concrete
 
         public DbSet<OurTeam> OurTeams { get; set; }
 
-        public DbSet<About> Aboutus { get; set; }
+        
 
 
 

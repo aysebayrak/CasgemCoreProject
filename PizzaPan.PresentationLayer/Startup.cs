@@ -65,6 +65,7 @@ namespace PizzaPan.PresentationLayer
             services.AddScoped<IOurTeamDal, EfOurTeamDal>();
 
 
+        
 
             //services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
             services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>(). AddEntityFrameworkStores<Context>();
