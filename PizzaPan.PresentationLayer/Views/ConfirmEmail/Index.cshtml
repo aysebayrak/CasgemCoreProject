@@ -4,9 +4,95 @@
     Layout = null;
 }
 
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 <!DOCTYPE html>
 
-<html>
+<html lang="zxx">
+
+<head>
+  @*  <title>Report Login Form Responsive Widget Template :: W3layouts</title>*@
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords"
+        content="Report Login Form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- //Meta tag Keywords -->
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!--/Style-CSS -->
+    <link rel="stylesheet" href="~/Report-Login-Free/css/style.css" type="text/css" media="all" />
+    <!--//Style-CSS -->
+
+    <link rel="stylesheet" href="~/Report-Login-Free/css/font-awesome.min.css" type="text/css" media="all">
+
+</head>
+
+<body>
+
+    <!-- form section start -->
+    <section class="w3l-hotair-form">
+        <h1>Email Onay</h1>
+        <div class="container">
+            <!-- /form -->
+            <div class="workinghny-form-grid">
+                <div class="main-hotair">
+                    <div class="content-wthree">
+                        <h2>Email Onay</h2>
+                       
+
+                <form asp-action="Index">
+                <div class="form-group">
+                    <label asp-for="UserName" class="control-label"></label>
+                    <input asp-for="UserName" class="form-control" value="@ViewBag.username"  readonly/>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ConfirmCode" class="control-label"></label>
+                    <input asp-for="ConfirmCode" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Kaydet" class="btn btn-primary" />
+                </div>
+
+                   <a asp-action="Index">Back to List</a>
+            </form>
+  
+                      
+                    </div>
+                 
+                    <div class="w3l_form align-self">
+                        <div class="left_grid_info">
+
+
+
+                            <img src="~/pizza.jpg" alt="" class="img-fluid">
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- //form -->
+        </div>
+        <!-- copyright-->
+        <div class="copyright text-center">
+           @* <p class="copy-footer-29">© 2021 Report Login Form. All rights reserved | Design by <a*@
+                     @*   href="https://w3layouts.com">W3layouts</a></p>*@
+        </div>
+
+
+         
+
+
+        <!-- //copyright-->
+    </section>
+    <!-- //form section start -->
+</body>
+
+</html>
+
+
+@*<html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Email Onay</title>
@@ -38,4 +124,4 @@
     </div>
 
 </body>
-</html>
+</html>*@

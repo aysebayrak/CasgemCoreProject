@@ -43,7 +43,7 @@ namespace PizzaPan.PresentationLayer.Controllers
             {
                 #region
                 MimeMessage mimeMessage = new MimeMessage();
-                MailboxAddress mailboxAddressFrom = new MailboxAddress("Admin", "@gmail.com");
+                MailboxAddress mailboxAddressFrom = new MailboxAddress("Admin", "ayse.bayrak812@gmail.com");
                 mimeMessage.From.Add(mailboxAddressFrom);
 
                 MailboxAddress mailboxAddressTo = new MailboxAddress("User", model.Email);
@@ -57,7 +57,7 @@ namespace PizzaPan.PresentationLayer.Controllers
 
                 SmtpClient smtpClient = new SmtpClient();
                 smtpClient.Connect("smtp.gmail.com", 587, false);
-                smtpClient.Authenticate("projekursapi@gmail.com", "ixlcgdpqkyhwhdej");
+                smtpClient.Authenticate("ayse.bayrak812@gmail.com", "ixlcgdpqkyhwhdej");
                 smtpClient.Send(mimeMessage);
                 smtpClient.Disconnect(true);
                 #endregion
