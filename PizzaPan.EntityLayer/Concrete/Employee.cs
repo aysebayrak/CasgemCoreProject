@@ -14,6 +14,7 @@ namespace PizzaPan.EntityLayer.Concrete
         public int EmployeeSalary{ get; set; }
         public int Maritalstatus { get; set; }
         public int EmployeeAge { get; set; }
+        
 
     }
 }
